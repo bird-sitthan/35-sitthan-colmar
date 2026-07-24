@@ -1,0 +1,79 @@
+* {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+
+.desktop-nav {
+    display: flex; /* ทำให้ .desktop-nav เป็น Flexbox เพื่อจัดวางลูกในแนวนอน */
+    align-items: center; /* จัดให้อยู่กึ่งกลางในแนวตั้ง */
+    justify-content: space-between; /* ดันลูกตัวแรกไปซ้าย ตัวสุดท้ายไปขวา และกระจายพื้นที่ตรงกลาง */
+    width: 100%; /* ให้เมนูกว้างเต็มพื้นที่ของ Parent */
+}
+
+.mobile-nav {
+    display: none; /* ซ่อนเมนูสำหรับมือถือไว้ก่อน (จะแสดงเมื่อถึง Media Query) */
+}
+
+.desktop-nav ul {
+    display: flex; /* ทำให้ <li> เรียงเป็นแนวนอนแทนแนวตั้ง */
+    list-style: none; /* เอาจุดหน้ารายการออก */
+    gap: 16px; /* เว้นระยะห่างระหว่างแต่ละ <li> 16px */
+}
+
+.desktop-nav li {
+    display: flex; /* ทำให้รูปภาพและข้อความภายใน <li> อยู่ในแนวเดียวกัน */
+    align-items: center; /* จัดรูปและข้อความให้อยู่กึ่งกลางในแนวตั้ง */
+}
+
+@media (max-width: 768px) { /* ถ้าหน้าจอกว้าง 768px หรือน้อยกว่า */
+
+    .desktop-nav {
+        display: none; /* ซ่อนเมนู Desktop */
+    }
+
+    .mobile-nav {
+        display: flex;  /* แสดงเมนู Mobile และใช้ Flexbox จัดวาง */
+    }
+
+}
+
+header {
+    display: flex; /* ทำให้โลโก้และเมนูอยู่ในแถวเดียวกัน */
+    align-items: center; /* จัดให้อยู่กึ่งกลางในแนวตั้ง */
+    justify-content: space-between; /* โลโก้อยู่ซ้าย เมนูอยู่ขวา */
+    padding-left: 24px; /* ระยะห่างซ้าย 24px ของความกว้างหน้าจอ */
+    padding-right: 24px;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    font-size: 20px;
+}
+
+.logo img {
+    width: 48px;
+    height: 48px;
+}
+
+.logo1 {
+    color: black;
+    font-weight: 600;
+}
+
+.logo2 {
+    color: gray;
+    font-weight: 350;
+}
+
+header li {
+    color: rgb(63, 62, 62);
+}
+
+
+
+
+
+
+
+
