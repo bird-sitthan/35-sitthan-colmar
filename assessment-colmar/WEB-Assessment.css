@@ -33,8 +33,22 @@
 
     .mobile-nav {
         display: flex;  /* แสดงเมนู Mobile และใช้ Flexbox จัดวาง */
+        width: 100%;
+        
     }
 
+    .mobile-nav ul {
+        display: flex;
+        list-style: none;
+        align-items: center; /* จัดให้อยู่กึ่งกลางในแนวตั้ง */
+        justify-content: space-between; /* ดันลูกตัวแรกไปซ้าย ตัวสุดท้ายไปขวา และกระจายพื้นที่ตรงกลาง */
+        width: 100%;
+    }
+
+    .mobile-nav li {
+        display: flex;
+        align-items: center; 
+    }
 }
 
 header {
