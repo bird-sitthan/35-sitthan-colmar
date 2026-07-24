@@ -4,32 +4,32 @@
 
 
 .desktop-nav {
-    display: flex; /* ทำให้ .desktop-nav เป็น Flexbox เพื่อจัดวางลูกในแนวนอน */
-    align-items: center; /* จัดให้อยู่กึ่งกลางในแนวตั้ง */
-    justify-content: space-between; /* ดันลูกตัวแรกไปซ้าย ตัวสุดท้ายไปขวา และกระจายพื้นที่ตรงกลาง */
-    width: 100%; /* ให้เมนูกว้างเต็มพื้นที่ของ Parent */
+    display: flex; 
+    align-items: center; 
+    justify-content: space-between; 
+    width: 100%; 
 }
 
 .mobile-nav {
-    display: none; /* ซ่อนเมนูสำหรับมือถือไว้ก่อน (จะแสดงเมื่อถึง Media Query) */
+    display: none;
 }
 
 .desktop-nav ul {
-    display: flex; /* ทำให้ <li> เรียงเป็นแนวนอนแทนแนวตั้ง */
-    list-style: none; /* เอาจุดหน้ารายการออก */
-    gap: 16px; /* เว้นระยะห่างระหว่างแต่ละ <li> 16px */
+    display: flex; 
+    list-style: none; 
+    gap: 16px; 
 }
 
 .desktop-nav li {
-    display: flex; /* ทำให้รูปภาพและข้อความภายใน <li> อยู่ในแนวเดียวกัน */
-    align-items: center; /* จัดรูปและข้อความให้อยู่กึ่งกลางในแนวตั้ง */
+    display: flex; 
+    align-items: center;
 }
 
 header {
-    display: flex; /* ทำให้โลโก้และเมนูอยู่ในแถวเดียวกัน */
-    align-items: center; /* จัดให้อยู่กึ่งกลางในแนวตั้ง */
-    justify-content: space-between; /* โลโก้อยู่ซ้าย เมนูอยู่ขวา */
-    padding-left: 24px; /* ระยะห่างซ้าย 24px ของความกว้างหน้าจอ */
+    display: flex; 
+    align-items: center; 
+    justify-content: space-between;
+    padding-left: 24px; 
     padding-right: 24px;
 }
 
@@ -99,15 +99,79 @@ header li {
     text-align:center;
 }
 
+.information {
+    display: flex; 
+    padding: 32px 24px; 
+}
 
-@media (max-width: 768px) { /* ถ้าหน้าจอกว้าง 768px หรือน้อยกว่า */
+.information-main {
+    width: 60%;
+    margin-right: 24px;
+}
+
+.information-main img {
+    width: 100%; 
+    display: block;
+    margin-bottom: 32px;
+}
+
+.information-main h2 {
+    font-size: 48px;
+    margin-bottom: 24px; 
+}
+
+.information-main p:first-of-type {
+    margin-bottom: 32px;
+}
+
+.information-cards {
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    padding-left: 16px;
+}
+
+.information-card {
+    display: flex;
+    align-items: center;
+    padding: 16px;
+    gap: 16px;
+}
+
+.information-card img {
+    width: 35%;
+    display: block;
+}
+
+.information-card-text {
+    width: 65%; 
+}
+
+.information-card-text h3 {
+    font-size: 32px;
+    margin-bottom: 8px; 
+}
+
+.information-card-text p {
+    margin-bottom: 8px; 
+}
+
+.information-card-text span {
+    color: rgb(60, 120, 200);
+}
+
+.information-card-highlight {
+    background-color: rgb(209, 208, 208);
+}
+
+@media (max-width: 768px) { 
 
     .desktop-nav {
-        display: none; /* ซ่อนเมนู Desktop */
+        display: none; 
     }
 
     .mobile-nav {
-        display: flex;  /* แสดงเมนู Mobile และใช้ Flexbox จัดวาง */
+        display: flex;  
         justify-content: space-between;
         width: 100%;
         
@@ -116,8 +180,8 @@ header li {
     .mobile-nav ul {
         display: flex;
         list-style: none;
-        align-items: center; /* จัดให้อยู่กึ่งกลางในแนวตั้ง */
-        justify-content: space-between; /* ดันลูกตัวแรกไปซ้าย ตัวสุดท้ายไปขวา และกระจายพื้นที่ตรงกลาง */
+        align-items: center; 
+        justify-content: space-between; 
         width: 100%;
     }
 
@@ -147,5 +211,40 @@ header li {
 
     .hero-button{
         margin-top:24px;
+    }
+
+    .information {
+        flex-direction: column;
+        padding: 0 16px; 
+    }
+
+    .information-main {
+        display: none;
+    }
+
+    .information-main img {
+        margin-bottom: 8px; 
+    }
+
+    .information-cards {
+        width: auto; 
+        padding-left: 0; 
+        gap: 64px; 
+    }
+
+    .information-card {
+        flex-direction: column; 
+        align-items: stretch; 
+        padding: 0;
+        gap: 16px;
+    }
+
+    .information-card img {
+        width: 100%; 
+    }
+
+    .information-card-text {
+        width: auto; 
+        padding: 0 16px;
     }
 }
